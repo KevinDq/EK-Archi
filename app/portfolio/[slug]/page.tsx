@@ -6,9 +6,7 @@ import type { Metadata, ResolvingMetadata } from "next";
 
 // ✅ ✅ ✅ NOUVEAU: Typage spécial pour generateMetadata
 export async function generateMetadata(
-  { params }: { params: Promise<{ slug: string }> },
-  _parent: ResolvingMetadata
-): Promise<Metadata> {
+  { params }: any  
   const { slug } = await params;
   const projet = projets.find((p) => p.slug === slug);
 
