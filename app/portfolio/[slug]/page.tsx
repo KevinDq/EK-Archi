@@ -1,18 +1,13 @@
-// app/portfolio/[slug]/page.tsx
-
 import { projets } from "@/app/data";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata, ResolvingMetadata } from "next";
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
+// ✅ ✅ ✅ NOUVEAU: Typage spécial pour generateMetadata
 export async function generateMetadata(
-  { params }: { params: Promise<{ slug: string }> }
+  { params }: { params: Promise<{ slug: string }> },
+  _parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { slug } = await params;
   const projet = projets.find((p) => p.slug === slug);
@@ -41,8 +36,12 @@ export async function generateMetadata(
   };
 }
 
-
-export default function RealisationDetail({ params }: Props) {
+// ✅ Fonction principale - typage simple, sans type partagé
+export default function RealisationDetail({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const projet = projets.find((p) => p.slug === params.slug);
 
   if (!projet) return notFound();
