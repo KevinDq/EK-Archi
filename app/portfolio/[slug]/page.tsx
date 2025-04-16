@@ -1,14 +1,17 @@
+// app/portfolio/[slug]/page.tsx
+
 import { projets } from "@/app/data";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
-export default function RealisationDetail({
+export default async function RealisationDetail({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const projet = projets.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const projet = projets.find((p) => p.slug === slug);
 
   if (!projet) return notFound();
 
@@ -76,11 +79,4 @@ export default function RealisationDetail({
       </section>
     </main>
   );
-}
-
-// ✅ Static params toujours pareil
-export async function generateStaticParams() {
-  return projets.map((projet) => ({
-    slug: projet.slug,
-  }));
 }
