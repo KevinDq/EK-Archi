@@ -25,27 +25,30 @@ type Props = {
 //     };
 //   }
 
-//   return {
-//     title: `Projet | ${projet.title}`,
-//     description: projet.descriptionParts?.join(" ") ?? "",
-//     openGraph: {
-//       title: `Projet | ${projet.title}`,
-//       description: projet.descriptionParts?.join(" ") ?? "",
-//       images: [
-//         {
-//           url: projet.image,
-//           width: 1200,
-//           height: 630,
-//           alt: projet.title,
-//         },
-//       ],
-//     },
-//   };
-// }
+  return {
+    title: `Projet | ${projet.title}`,
+    description: projet.descriptionParts?.join(" ") ?? "",
+    openGraph: {
+      title: `Projet | ${projet.title}`,
+      description: projet.descriptionParts?.join(" ") ?? "",
+      images: [
+        {
+          url: projet.image,
+          width: 1200,
+          height: 630,
+          alt: projet.title,
+        },
+      ],
+    },
+  };
+}
 
-export default async function RealisationDetail({ params }: Props) {
-  const { slug } = params;
-  const projet = projets.find((p) => p.slug === slug);
+export default async function RealisationDetail({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const projet = projets.find((p) => p.slug === params.slug);
 
   if (!projet) return notFound();
 
