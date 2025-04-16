@@ -5,6 +5,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://ek-archi.vercel.app"),
   title: "Emilie Kinnoo | Architecte",
+  icons: {
+    icon: '/favicon.ico',
+  },
   description:
     "Découvrez les projets architecturaux d'Emilie Kinnoo' : maisons contemporaines, villas design et espaces uniques.",
   keywords: ["architecte", "architecture moderne", "portfolio", "Emilie Kinnoo", "design"],
