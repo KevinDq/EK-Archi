@@ -3,7 +3,7 @@ import { projets } from "@/app/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://archi-qimt.vercel.app"),
+  metadataBase: new URL("https://ek-archi.vercel.app"),
   title: "Emilie Kinnoo | Portfolio",
   description:
     "Découvrez les projets architecturaux d'Emilie Kinnoo' : maisons contemporaines, villas design et espaces uniques.",  
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Emilie Kinnoo | Portfolio",
     description:
       "Un portfolio moderne présentant les réalisations architecturales d'Emilie Kinnoo.",
-    url: "https://archi-qimt.vercel.app/portfolio",
+    url: "https://ek-archi.vercel.app/portfolio",
     siteName: "Portfolio Emilie Kinnoo",
     images: [
       {
