@@ -6,7 +6,9 @@ import type { Metadata, ResolvingMetadata } from "next";
 
 // ✅ ✅ ✅ NOUVEAU: Typage spécial pour generateMetadata
 export async function generateMetadata(
-  { params }: any  
+  { params }: { params: Promise<{ slug: string }> },
+  _parent: ResolvingMetadata
+): Promise<Metadata> {
   const { slug } = await params;
   const projet = projets.find((p) => p.slug === slug);
 
@@ -110,6 +112,7 @@ export default function RealisationDetail({
   );
 }
 
+// ✅ Static params toujours pareil
 export async function generateStaticParams() {
   return projets.map((projet) => ({
     slug: projet.slug,
