@@ -11,6 +11,37 @@ type Props = {
   };
 };
 
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+  const { slug } = await params;
+  const projet = projets.find((p) => p.slug === slug);
+
+  if (!projet) {
+    return {
+      title: "Projet non trouvé",
+    };
+  }
+
+  return {
+    title: `Projet | ${projet.title}`,
+    description: projet.descriptionParts?.map((p) => (typeof p === "string" ? p : p.text)).join(" "),
+    openGraph: {
+      title: `Projet | ${projet.title}`,
+      description: projet.descriptionParts?.map((p) => (typeof p === "string" ? p : p.text)).join(" "),
+      images: [
+        {
+          url: projet.image,
+          width: 1200,
+          height: 630,
+          alt: projet.title,
+        },
+      ],
+    },
+  };
+}
+
+
 export default function RealisationDetail({ params }: Props) {
   const projet = projets.find((p) => p.slug === params.slug);
 
