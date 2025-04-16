@@ -4,7 +4,7 @@ import { projets } from "@/app/data";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 
 type Props = {
   params: {
@@ -12,7 +12,10 @@ type Props = {
   };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(
+  { params }: Props,
+  _parent: ResolvingMetadata
+): Promise<Metadata> {
   const { slug } = params;
   const projet = projets.find((p) => p.slug === slug);
 
