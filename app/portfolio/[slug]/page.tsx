@@ -4,6 +4,7 @@ import { projets } from "@/app/data";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { use } from 'react';
 
 type Props = {
   params: {
@@ -11,7 +12,8 @@ type Props = {
   };
 };
 
-export default async function RealisationDetail({ params }: Props) {
+export default function RealisationDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params);
   const projet = projets.find((p) => p.slug === params.slug);
   if (!projet) return notFound();
 
