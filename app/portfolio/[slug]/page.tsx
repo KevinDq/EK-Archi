@@ -4,7 +4,6 @@ import { projets } from "@/app/data";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import type { Metadata, ResolvingMetadata } from "next";
 
 type Props = {
   params: {
@@ -12,44 +11,8 @@ type Props = {
   };
 };
 
-// export async function generateMetadata(
-//   { params }: Props,
-//   _parent: ResolvingMetadata
-// ): Promise<Metadata> {
-//   const { slug } = params;
-//   const projet = projets.find((p) => p.slug === slug);
-
-//   if (!projet) {
-//     return {
-//       title: "Projet non trouvé",
-//     };
-//   }
-
-//   return {
-//     title: `Projet | ${projet.title}`,
-//     description: projet.descriptionParts?.join(" ") ?? "",
-//     openGraph: {
-//       title: `Projet | ${projet.title}`,
-//       description: projet.descriptionParts?.join(" ") ?? "",
-//       images: [
-//         {
-//           url: projet.image,
-//           width: 1200,
-//           height: 630,
-//           alt: projet.title,
-//         },
-//       ],
-//     },
-//   };
-// }
-
-export default async function RealisationDetail({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function RealisationDetail({ params }: Props) {
   const projet = projets.find((p) => p.slug === params.slug);
-
   if (!projet) return notFound();
 
   return (
@@ -118,7 +81,7 @@ export default async function RealisationDetail({
   );
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return projets.map((projet) => ({
     slug: projet.slug,
   }));
