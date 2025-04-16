@@ -6,11 +6,11 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata, ResolvingMetadata } from "next";
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
+// type Props = {
+//   params: {
+//     slug: string;
+//   };
+// };
 
 // export async function generateMetadata(
 //   { params }: Props,
