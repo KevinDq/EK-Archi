@@ -3,7 +3,7 @@ import Header from "@/components/header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://archi-qimt.vercel.app"),
+  metadataBase: new URL("https://ek-archi.vercel.app"),
   title: "Emilie Kinnoo | Architecte",
   description:
     "Découvrez les projets architecturaux d'Emilie Kinnoo' : maisons contemporaines, villas design et espaces uniques.",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Emilie Kinnoo | Architecte",
     description:
       "Un portfolio moderne présentant les réalisations architecturales d'Emilie Kinnoo.",
-    url: "https://archi-qimt.vercel.app",
+    url: "https://ek-archi.vercel.app",
     siteName: "Portfolio Emilie Kinnoo",
     images: [
       {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Emilie Kinnoo | Architecte",
     description: "Découvrez les projets architecturaux d'Emilie Kinnoo.",
-    images: ["/images/home-bg.jpg"],
+    images: ["/images/maison-indivuelle-1.jpg"],
   },
 };
 
