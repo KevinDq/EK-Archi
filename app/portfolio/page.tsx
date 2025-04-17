@@ -31,7 +31,7 @@ export default function Realisations() {
     <main className="pt-16 px-2 2xl:px-48 h-screen bg-stone-100">
       {/* Section Titre */}
       <header className="text-center mb-12 relative z-10 mt-14 animate-fade-in-up">
-        <h1 className="text-4xl font-bold text-gray-600 mb-4 relative" style={{ textShadow: '2px 2px 6px rgba(0, 0, 0, 0.4)' }}>          
+        <h1 className="text-4xl font-bold text-gray-600 mb-4 relative font-leah" style={{ textShadow: '2px 2px 6px rgba(0, 0, 0, 0.4)' }}>          
           Ce que j'ai réalisé
         </h1>
         <p className="text-lg text-gray-600 opacity-75" style={{ textShadow: '2px 2px 6px rgba(0, 0, 0, 0.4)' }}>Découvrez mes projets les plus récents et inspirants.</p>
