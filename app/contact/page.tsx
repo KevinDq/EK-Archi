@@ -79,10 +79,10 @@ const Contact = () => {
               <div className='mt-4 flex flex-col items-center'>
                 <strong>Suivez-moi :</strong>
                 <div className="flex space-x-4 mt-2 text-2xl">
-                  <a href="https://facebook.com/profile.php?id=100046027237718" target="_blank" rel="noopener noreferrer" className="text-teal-300 p-1 hover:bg-stone-200 hover:rounded-full">
+                  <a href="https://facebook.com/profile.php?id=100046027237718" target="_blank" rel="noopener noreferrer" className="text-blue-500 p-1 hover:bg-stone-200 hover:rounded-full">
                     <FaFacebook />
                   </a>                
-                  <a href="https://www.linkedin.com/in/kinnoo-emilie-9663032aa/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Efr%2F&originalSubdomain=fr" target="_blank" rel="noopener noreferrer" className="text-teal-300 p-1 hover:bg-stone-200 hover:rounded-full">
+                  <a href="https://www.linkedin.com/in/kinnoo-emilie-9663032aa/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Efr%2F&originalSubdomain=fr" target="_blank" rel="noopener noreferrer" className="text-blue-500 p-1 hover:bg-stone-200 hover:rounded-full">
                     <FaLinkedin />
                   </a>
                 </div>
