@@ -72,9 +72,9 @@ const Contact = () => {
             <div className='flex flex-col justify-between items-center'>
               <h2 className="text-2xl font-semibold mb-4">Informations</h2>
               <ul className="space-y-4">
-                <li className="flex items-center space-x-2"><FaHome className="text-teal-300 text-2xl mr-4" />28, av. des Tilleuls 55100 Doulcon</li>
-                <li className="flex items-center space-x-2"><FaPhone className="text-teal-300 text-2xl mr-4" />06 30 66 83 20</li>
-                <li className="flex items-center space-x-2"><FaEnvelope className="text-teal-300 text-2xl mr-4" />emilie.kinnoo@gmail.com</li>              
+                <li className="flex items-center space-x-2"><FaHome className="text-blue-500 text-2xl mr-4" />28, av. des Tilleuls 55100 Doulcon</li>
+                <li className="flex items-center space-x-2"><FaPhone className="text-blue-500 text-2xl mr-4" />06 30 66 83 20</li>
+                <li className="flex items-center space-x-2"><FaEnvelope className="text-blue-500 text-2xl mr-4" />emilie.kinnoo@gmail.com</li>              
               </ul>
               <div className='mt-4 flex flex-col items-center'>
                 <strong>Suivez-moi :</strong>
