@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <main className="text-gray-800 h-screen w-screen bg-stone-100 py-16 px-4 flex flex-col gap-6 bg-repeat lg:flex-row xl:items-center">      
+    <main className="text-gray-800 min-h-screen w-screen bg-stone-100 py-16 px-4 flex flex-col gap-6 bg-repeat lg:flex-row xl:items-center">      
       <section className="max-w-4xl mx-auto animate-fade-in-up mt-20 sm:mt-4 lg:order-2">
         <h1 className="text-5xl font-semibold text-center mb-9 mt-5 font-leah text-gray-900">
           Qui je suis
