@@ -1,5 +1,3 @@
-// app/portfolio/[slug]/page.tsx
-
 import { projets } from "@/app/data";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -16,12 +14,12 @@ export default async function RealisationDetail({
   if (!projet) return notFound();
 
   return (
-    <main className="min-h-screen w-full bg-stone-300 px-4 py-20 flex justify-center items-center overflow-auto">
-      <section className="backdrop-blur-md mt-6 bg-white/50 border border-white/20 shadow-lg max-w-9/10 w-full xl:max-w-4/5 p-8 text-gray-800">
+    <main className="min-h-screen w-full bg-stone-300 px-4 pt-28 py-20 flex sm:items-center justify-center">
+      <section className="backdrop-blur-md mt-20 sm:mt-6 bg-white/50 border border-white/20 shadow-lg sm:max-w-8/10 w-full xl:max-w-2/3 p-8 text-gray-800">
         <header>
-          <h1 className="text-4xl font-semibold mb-6 text-center font-serif">{projet.title}</h1>
+          <h1 className="text-2xl sm:text-4xl font-semibold mb-6 text-center font-serif">{projet.title}</h1>
         </header>
-        <article className="flex flex-col xl:flex-row gap-6">
+        <article className="flex flex-col xl:flex-row gap-1 sm:gap-6">
           <div className="basis-1/2 w-full flex items-center">
             <Image
               src={projet.image}
@@ -32,7 +30,7 @@ export default async function RealisationDetail({
             />
           </div>
           <div className="basis-1/2 flex flex-col justify-between">
-            <p className="text-base leading-relaxed text-gray-700">
+            <p className="text-sm text-justify sm:text-base leading-relaxed text-gray-700">
               {projet.descriptionParts?.map((part, index) =>
                 typeof part === "string" ? (
                   <span key={index}>{part}</span>
