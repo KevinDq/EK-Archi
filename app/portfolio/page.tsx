@@ -3,7 +3,7 @@ import { projets } from "@/app/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ek-archi.vercel.app"),
+  metadataBase: new URL("https://archi-qimt.vercel.app"),
   title: "Emilie Kinnoo | Portfolio",
   description:
     "Découvrez les projets architecturaux d'Emilie Kinnoo' : maisons contemporaines, villas design et espaces uniques.",  
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Emilie Kinnoo | Portfolio",
     description:
       "Un portfolio moderne présentant les réalisations architecturales d'Emilie Kinnoo.",
-    url: "https://ek-archi.vercel.app/portfolio",
+    url: "https://archi-qimt.vercel.app/portfolio",
     siteName: "Portfolio Emilie Kinnoo",
     images: [
       {
@@ -30,7 +30,7 @@ export default function Realisations() {
   return (
     <main className="pt-16 px-2 2xl:px-48 h-screen bg-stone-100">
       {/* Section Titre */}
-      <header className="text-center mb-12 relative z-10 mt-14 animate-fade-in-up">
+      <header className="text-center mb-12 relative z-10 mt-24 animate-fade-in-up">
         <h1 className="text-5xl font-bold text-gray-600 mb-4 relative font-leah" style={{ textShadow: '2px 2px 6px rgba(0, 0, 0, 0.4)' }}>          
           Ce que j'ai réalisé
         </h1>
@@ -48,4 +48,3 @@ export default function Realisations() {
     </main>
   );
 }
-
