@@ -23,7 +23,7 @@ const Contact = () => {
     setIsSubmitting(true); // Le formulaire est en cours d'envoi
 
     try {
-      const response = await fetch('https://formspree.io/f/mqapwapb', {
+      const response = await fetch('https://formspree.io/f/manegdkg', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
