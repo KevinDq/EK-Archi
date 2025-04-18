@@ -6,23 +6,40 @@ import Clock from './Clock';
 
 export default function Header() {
   return (
-    <header className="fixed top-0 w-full z-40 bg-gray-700/75 -transition duration-500">        
-      <article className="max-w-full mx-auto px-6 py-4 flex items-center justify-between flex-col text-white sm:flex-row">
-        <div className="flex items-center">
-            <Image src={logo} 
-                   alt="Logo de l'architecte" 
-                   className="w-10 sm:w-12 md:w-16 h-auto"
-                   sizes="(max-width: 640px) 40px, (max-width: 768px) 48px, 64px" />
-            <h3 className="text-lg md:text-2xl ml-2">Emilie Kinnoo Architecte</h3>
-        </div>   
-        <nav className="space-x-6 text-base uppercase text-sm tracking-wide mt-4 md:text-lg md:mt-0">
+    <header className="fixed top-0 w-full z-40 bg-gray-700/75">
+      <article className="max-w-full mx-auto px-4 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between text-white space-y-4 sm:space-y-0">
+        {/* Logo + Titre */}
+        <div className="flex items-center justify-center">
+          <div className="flex items-center">
+            <Image
+              src={logo}
+              alt="Logo de l'architecte"
+              className="w-10 h-auto sm:w-12 md:w-16"
+              sizes="(max-width: 640px) 40px, (max-width: 768px) 48px, 64px"
+            />
+            <h3 className="text-base ml-2 sm:text-lg md:text-2xl">
+              Emilie Kinnoo Architecte
+            </h3>
+          </div>
+          {/* Optionnel : cacher l'horloge sur très petits écrans */}
+          <div className="block sm:hidden ml-2">
+            <Clock />
+          </div>
+        </div>
+
+        {/* Navigation */}
+        <nav className="flex flex-wrap justify-center gap-3 text-sm sm:text-base uppercase tracking-wide">
           <Link className="navlink" href="/">Accueil</Link>
           <Link className="navlink" href="/portfolio">Réalisations</Link>
           <Link className="navlink" href="/about">À propos</Link>
           <Link className="navlink" href="/contact">Contact</Link>
         </nav>
-        <Clock/>
-      </article>      
+
+        {/* Horloge desktop */}
+        <div className="hidden sm:block">
+          <Clock />
+        </div>
+      </article>
     </header>
   );
 }
