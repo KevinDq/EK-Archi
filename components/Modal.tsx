@@ -19,6 +19,9 @@ export default function Modal({ isOpen, onClose, title, content, image, slug }: 
     } else {
       document.body.style.overflow = "auto";
     }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [isOpen]);
 
   if (!isOpen) return null;
