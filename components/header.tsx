@@ -28,7 +28,7 @@ export default function Header() {
         </div>
 
         {/* Navigation */}
-        <nav className="flex flex-wrap justify-center gap-3 text-sm sm:text-base uppercase tracking-wide">
+        <nav className="flex flex-wrap justify-center gap-3 sm:gap-12 text-sm sm:text-base uppercase tracking-wide">
           <Link className="navlink" href="/">Accueil</Link>
           <Link className="navlink" href="/portfolio">Réalisations</Link>
           <Link className="navlink" href="/about">À propos</Link>
