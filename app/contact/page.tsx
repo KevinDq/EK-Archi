@@ -23,7 +23,7 @@ const Contact = () => {
     setIsSubmitting(true); // Le formulaire est en cours d'envoi
 
     try {
-      const response = await fetch('https://formspree.io/f/manegdkg', {
+      const response = await fetch('https://formspree.io/f/mqapwapb', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -48,10 +48,10 @@ const Contact = () => {
   };
 
   return (
-    <main className="w-screen h-screen mx-auto px-4 py-12 bg-zinc-200 flex flex-col lg:flex-row items-center justify-around">
-      <header className='w-lg flex flex-col items-center justify-center gap-6 my-24'>
+    <main className="w-full min-h-screen mx-auto px-2 sm:px-4 pt-28 sm:py-12 bg-zinc-200 bg-fixed flex flex-col lg:flex-row items-center justify-around">
+      <header className='sm:w-lg flex flex-col items-center justify-center gap-4 sm:gap-6 my-10 sm:my-24'>
         <h1 className="text-7xl font-bold text-center animate-fade-in-up font-leah">Contactez-moi</h1>        
-        <p className="text-lg text-gray-700">
+        <p className="text-center sm:text-lg text-gray-700">
           Vous avez une idée, un espace à transformer ou un lieu à imaginer ?
           Discutons-en. Je vous accompagne dans toutes les étapes, de la conception à la réalisation.
         </p>
@@ -61,12 +61,12 @@ const Contact = () => {
         <Image
                       src="/images/design.png"
                       alt="Portrait de l'architecte"
-                      width={100}
-                      height={100}
+                      width={75}
+                      height={75}
                       className=""
                     />              
       </header> 
-      <section className='flex flex-col w-9/10 md:w-auto items-center md:flex-row gap-12 p-12 bg-zinc-600 text-zinc-300'>
+      <section className='flex flex-col w-full  md:w-auto items-center md:flex-row gap-4 sm:gap-12 p-4 sm:p-12 bg-zinc-600 text-zinc-300'>
         <article className="flex flex-row justify-center items-center w-full md:w-7/10 md:flex-col gap-8 animate-slide-in basis-1/2">     
             {/* Informations de contact */}
             <div className='flex flex-col justify-between items-center'>
@@ -104,8 +104,8 @@ const Contact = () => {
               </div>            
             </div>     
         </article>       
-        <article className="p-6 shadow-xl w-full bg-zinc-200 text-zinc-600 basis-1/2">          
-            <h2 className="text-xl font-semibold mb-4">Envoyez-moi un message</h2>
+        <article className="p-4 sm:p-6 shadow-xl w-full bg-zinc-200 text-zinc-600 basis-1/2">          
+            <h2 className="text-xl font-semibold text-center mb-4">Envoyez-moi un message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium">Nom :</label>
