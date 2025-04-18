@@ -25,7 +25,7 @@ export default function Modal({ isOpen, onClose, title, content, image, slug }: 
 
   return (
     <section className="fixed inset-0 z-60 bg-black/75 flex items-center justify-center p-4">      
-      <article className="bg-white p-6 max-w-2/3 w-full h-2/3 shadow-xl relative flex gap-8">
+      <article className="bg-white p-6 sm:max-w-2/3 w-full h-9/10 sm:h-2/3 shadow-xl flex flex-col sm:flex-row relative flex gap-8">
         <div className="h-full basis-2/3">
           <img src={image} alt={title} className="h-full object-cover" />
         </div>
